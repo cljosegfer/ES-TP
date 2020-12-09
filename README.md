@@ -1,4 +1,4 @@
-# ES-TP - \<nome>
+# ES-TP - Amigo Nerd
 
 Um compartilhador de planos de estudo.
 
@@ -11,8 +11,8 @@ Um compartilhador de planos de estudo.
 
 ## Aplicação:
 
-O sistema será como uma rede social de planos de estudo. Os usuários poderão seguir, criar e compartilhar planos de estudo com informações relevantes sobre o curso específico, como por exemplo: referências bibliográficas; cronograma; bateria de exercícios(?); requisitos; entre outros.
+O sistema será como uma rede social de planos de estudo. Os usuários poderão seguir, criar e compartilhar planos de estudo com informações relevantes sobre o curso específico, como por exemplo: referências bibliográficas; cronograma; anexos relevantes; *links* para cursos *online*; bateria de exercícios; requisitos; entre outros.
 
 ## Tecnologias:
 
-NodeJS e ReactJS.
+NodeJS, ReactJS, MongoDB e GitHub. .
