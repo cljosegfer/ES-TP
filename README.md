@@ -16,3 +16,7 @@ O sistema será como uma rede social de planos de estudo. Os usuários poderão 
 ## Tecnologias:
 
 NodeJS, ReactJS, MongoDB e GitHub.
+
+## Scrumboard
+
+<a href="https://github.com/josegfer/ES-TP/projects/1">Link</a>
