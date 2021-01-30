@@ -24,7 +24,17 @@ div#form div{
     width: 400px;
     margin: 10px;
     background-color: ghostwhite;
+    transition: transform 0.3s;
     
+}
+
+div#form div:hover{
+    transform: scale(1.03);
+}
+
+div#form div:hover::after{
+    transform: scale(2.0);
+    background-color: red;
 }
 
 div#form div input,
@@ -35,5 +45,19 @@ div#form div select{
 }
 
 div#form div label{
+    font-family: Roboto, sans-serif;
+}
+
+button#cadastrar {
+    border: 1px solid black;
+    padding: 10px;
+    width: 400px;
+    margin: 10px;
+    background-color: ghostwhite;
+    transition: transform 0.3s;
+}
+
+button#cadastrar:hover {
+    transform: scale(1.03);
     
 }
