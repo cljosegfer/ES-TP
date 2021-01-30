@@ -21,7 +21,7 @@ function senhasCoincidem(senha, confirmacaoSenha)
     }
 }
 
-function cadastrar()
+function cadastrarUsuario()
 {
     //Verificando se todos os campos de input (exceto o de sexo) estão preenchidos
     var camposDeEntrada = document.querySelectorAll('input');
