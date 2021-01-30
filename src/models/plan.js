@@ -18,6 +18,10 @@ const plan_schema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+    course: {
+        type: String,
+        required: true,
+    },
 })
 
 plan_schema.plugin(mongoose_paginate)
