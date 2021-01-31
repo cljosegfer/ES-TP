@@ -1,60 +1,60 @@
+:root {
+    --verde: #154047;
+    --whitewidth: 800px;
+}
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: var(--verde);
 }
 
-div#form,
-div#formulario{
+div.container{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 800px;
-    background-color: #154047;
+    width: 1000px;
+    background-color: var(--verde);
 }
 
-div#form div,
-div#formulario div#cabecalho div,
-div#conteudoCurso,
-div#cadastrar{
+div.whiteboard{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     border: 1px solid black;
     padding: 20px;
-    width: 400px;
+    width: var(--whitewidth);
     margin: 10px;
     background-color: ghostwhite;
     transition: transform 0.3s;
     
 }
 
-div#form div:hover,
-div#formulario div#cabecalho div:hover,
-div#conteudoCurso:hover,
-div#cadastrar:hover{
+div.whiteboard:hover{
     transform: scale(1.03);
 }
 
 input,
-select{
-    width: 100%;
+select,
+textarea{
+    width: 80%;
     height: 50px;
-    margin: 10px 0;
+    margin: 10px 0
 }
 
 label,
-div#conteudoCurso h3{
+h1, h2, h3, h4, h5, h6{
     font-family: Roboto, sans-serif;
 }
 
 button.botao{
     border: 1px solid black;
     padding: 10px;
-    width: 400px;
+    width: calc(var(--whitewidth) / 2);
     margin: 10px;
     background-color: ghostwhite;
     transition: all 0.3s;
@@ -62,7 +62,7 @@ button.botao{
 }
 
 button.botao:hover {
-    background-color: #154047;
+    background-color: var(--verde);
     color: ghostwhite;
     font-weight:bold;
     transition: all 0.5s;
@@ -75,7 +75,6 @@ div#botoes {
     align-content: space-between;
 }
 
-button#addLinha,
-button#remLinha {
-    width: 184px;
+button.botaopequeno {
+    width: calc(var(--whitewidth) / 4 - 10px);
 }

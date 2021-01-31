@@ -5,10 +5,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     </head>
     <body>
-        <h1>Cadastrar Usuário</h1>
-        <div id='form'>
+        <div class="whiteboard">
+            <h1>Cadastrar Usuário</h1>
+        </div>
+        <div  class="container" id='form'>
             <!-- Dados Pessoais -->
-            <div>
+            <div class="whiteboard">
                 <label for='nome'>Nome: </label>
                 <input 
                     type='text'
@@ -17,7 +19,7 @@
                 />
             </div>
 
-            <div>
+            <div class="whiteboard">
                 <label for='nascimento'>Data de Nascimento: </label>
                 <input 
                     type='date' 
@@ -25,7 +27,7 @@
                 />
             </div>
 
-            <div>
+            <div class="whiteboard">
                 <label for='sexo'>Sexo:</label>
                 <select id='sexo'>
                     <option value='Masculino'>Masculino</option>
@@ -33,7 +35,7 @@
                 </select>
             </div>
 
-            <div>
+            <div class="whiteboard">
                 <label for='email'>E-mail</label>
                 <input 
                     type='email' 
@@ -42,7 +44,7 @@
                 />
             </div>
             <!-- Dados do Usuário -->
-            <div>
+            <div class="whiteboard">
                 <label for='nomeUsuario'>Digite o nome do usuário: </label>
                 <input
                     type='text' 
@@ -50,7 +52,7 @@
                     placeholder='Insira seu nome de usuário'
                 />
             </div>
-            <div>
+            <div class="whiteboard">
                 <label for='senha'>Digite sua senha: </label>
                 <input 
                     type='password' 
@@ -58,7 +60,7 @@
                     placeholder='Insira sua senha'
                 />
             </div>
-            <div>
+            <div class="whiteboard">
                 <label for='senhaConfirm'>Confirme sua senha: </label>
                 <input 
                     type='password' 
@@ -66,7 +68,7 @@
                     placeholder='Insira novamente sua senha'
                 />
             </div>
-            <div>
+            <div class="whiteboard">
                 <button class="botao" id='cadastrar' onclick="cadastrarUsuario()">Cadastrar</button>
             </div>
         </div>
