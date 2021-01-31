@@ -17,7 +17,8 @@ div#formulario{
 
 div#form div,
 div#formulario div#cabecalho div,
-div#conteudoCurso{
+div#conteudoCurso,
+div#cadastrar{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,7 +34,8 @@ div#conteudoCurso{
 
 div#form div:hover,
 div#formulario div#cabecalho div:hover,
-div#conteudoCurso:hover{
+div#conteudoCurso:hover,
+div#cadastrar:hover{
     transform: scale(1.03);
 }
 
@@ -49,15 +51,22 @@ div#conteudoCurso h3{
     font-family: Roboto, sans-serif;
 }
 
-button#cadastrar,
-button#cadastrarPlano,
-div#botoes button {
+button.botao{
     border: 1px solid black;
     padding: 10px;
     width: 400px;
     margin: 10px;
     background-color: ghostwhite;
-    transition: transform 0.3s;
+    transition: all 0.3s;
+    font-family: Roboto;
+}
+
+button.botao:hover {
+    background-color: #154047;
+    color: ghostwhite;
+    font-weight:bold;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
 div#botoes {
@@ -66,12 +75,7 @@ div#botoes {
     align-content: space-between;
 }
 
-div#botoes button {
+button#addLinha,
+button#remLinha {
     width: 184px;
-}
-
-button#cadastrar:hover,
-button#cadastrarPlano:hover {
-    transform: scale(1.03);
-
 }
