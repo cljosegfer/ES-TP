@@ -40,16 +40,9 @@ class Usuario {
             date_of_birth: document.getElementById("nascimento").value,
             email: document.getElementById("email").value,
             gender: document.getElementById("sexo").value
-        };
-    }
+           };
+       }
 }
-
-
-<<<<<<< Updated upstream
-    //Sexo não é um campo do tipo input, portanto, não está na variável camposDeEntrada
-    var sexo = document.getElementById('sexo');
-}
-=======
 
 function cadastrarUsuario()
 {
