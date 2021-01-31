@@ -5,10 +5,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     </head>
     <body>
-        <h1>Cadastrar Plano</h1>
-        <div id="formulario">
+        <div class="whiteboard">
+            <h1>Cadastrar Plano</h1>
+        </div>
+        <div class="container" id="formulario">
             <div id="cabecalho">
-                <div>
+                <div class="whiteboard">
                     <label for="disciplina">Nome da disciplina: </label>
                     <input 
                         id="disciplina"
@@ -17,7 +19,7 @@
                         size="55"
                     >
                 </div>
-                <div>
+                <div class="whiteboard">
                     <label for="ementa">Ementa: </label>
                     <input
                         id="ementa"
@@ -26,7 +28,7 @@
                         size="55"
                     >
                 </div>
-                <div>
+                <div class="whiteboard">
                     <label for="descricao">Descrição</label>
                     <textarea
                         id="descricao"
@@ -35,7 +37,7 @@
                         cols="50"
                     ></textarea>
                 </div>
-                <div>
+                <div class="whiteboard">
                     <label for="referencias">Referências: </label>
                     <textarea
                         id="referencias"
@@ -46,20 +48,20 @@
                 </div>
             </div>
             
-            <div id="conteudoCurso">
+            <div class="whiteboard" id="conteudoCurso">
                 <h3>Conteúdo do curso</h3>
                 <div id="linhas">
                 </div>
 
                 <div id="botoes">
-                    <button class="botao" id='addLinha'>Adicionar Linha</button>
-                    <button class="botao" id='remLinha'>Remover Linha</button>
+                    <button class="botao botaopequeno" id='addLinha'>Adicionar Linha</button>
+                    <button class="botao botaopequeno" id='remLinha'>Remover Linha</button>
                 </div>
             </div>
 
             
 
-            <div id="cadastrar">
+            <div class="whiteboard" id="cadastrar">
                 <button class="botao" id='cadastrarPlano'>Cadastrar Plano</button>
             </div>
         </div>
