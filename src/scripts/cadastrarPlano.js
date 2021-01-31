@@ -17,6 +17,19 @@ class Cabecalho {
 
         return this.cabecalho;
     }
+
+    estaNulo()
+    {
+        for(var campo in cabecalho)
+        {
+            if(cabecalho[campo].value === "")
+            {
+                alert("Preencha todos os campos!");
+                cabecalho[campo].focus();
+                return false;
+            }
+        }
+    }
 }
 
 class TopicosPlano {
@@ -57,14 +70,11 @@ class TopicosPlano {
 
 function cadastrarPlano(cabecalho, topicos)
 {
-    console.log(cabecalho.getValoresCabecalho());
-    console.log(topicos.getValoresLinhas());
-    //Necessita subir dados para o banco de dados 
+    if(!cabecalho.estaNulo())
+    {
+        return false;
+    }
 }
-
-
-
-
 
 var topicos = new TopicosPlano();
 var cabecalho = new Cabecalho();
@@ -77,6 +87,4 @@ document.getElementById("remLinha").onclick = function() {
     topicos.removerLinha();
 }
 
-document.getElementById("cadastrarPlano").onclick = function() {
-    cadastrarPlano(cabecalho, topicos);
-}
+document.getElementById("cadastrarPlano").onclick = cadastrarPlano(cabecalho, topicos);
