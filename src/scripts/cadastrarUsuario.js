@@ -1,45 +1,68 @@
-function estaNulo(campo)
-{
-    if(campo.value == "")
+class Usuario {
+    constructor()
     {
-        alert("Preencha todos os campos!");
-        campo.focus();
-        return true;
+        
     }
-    return false;
-}
-
-function senhasCoincidem(senha, confirmacaoSenha)
-{
-    if(senha.value === confirmacaoSenha.value)
+    estaNulo()
     {
-        return true;
-    }else{
-        alert("As senhas não coincidem! Digite-as novamente!");
-        senha.focus();
-        return false;
-    }
-}
-
-function cadastrarUsuario()
-{
-    //Verificando se todos os campos de input (exceto o de sexo) estão preenchidos
-    var camposDeEntrada = document.querySelectorAll('input');
-    for(var i=0; i<camposDeEntrada.length; i++)
-    {
-        if(estaNulo(camposDeEntrada[i]))
+        var camposDeEntrada = document.querySelectorAll('input');
+        for(var campo in camposDeEntrada)
         {
+            if(camposDeEntrada[campo].value == "")
+            {
+                alert("Preencha todos os campos!");
+                camposDeEntrada[campo].focus();
+                return false;
+            }
+        }
+        return true;
+    }
+
+    validaSenhas()
+    {
+        var senhas = document.querySelectorAll('input[type=password]');
+        if(senhas[0].value === senhas[1].value)
+        {
+            return true;
+        }else{
+            alert("As senhas não coincidem! Digite-as novamente!");
+            senha.focus();
             return false;
         }
     }
 
-    //Validando a senha
-    var senhas = document.querySelectorAll('input[type=password]');
-    if(!senhasCoincidem(senhas[0], senhas[1]))
+    getDadosJSON()
     {
-        return false;
+        return {
+            username: document.getElementById("nomeUsuario").value,
+            password: document.getElementById("senha").value,
+            name: document.getElementById("nome").value,
+            date_of_birth: document.getElementById("nascimento").value,
+            email: document.getElementById("email").value,
+            gender: document.getElementById("sexo").value
+        };
     }
+}
 
+
+<<<<<<< Updated upstream
     //Sexo não é um campo do tipo input, portanto, não está na variável camposDeEntrada
     var sexo = document.getElementById('sexo');
 }
+=======
+
+function cadastrarUsuario()
+{
+    var usuario = new Usuario();
+    if(!usuario.estaNulo())
+    {
+        return false;
+    }
+    if(!usuario.validaSenhas())
+    {
+        return false;
+    }
+    console.log(usuario.getDadosJSON());
+}
+
+>>>>>>> Stashed changes
