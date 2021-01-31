@@ -57,5 +57,3 @@ function cadastrarUsuario()
     }
     console.log(usuario.getDadosJSON());
 }
-
->>>>>>> Stashed changes
