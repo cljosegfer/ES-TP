@@ -1,5 +1,3 @@
-
-
 function estaNulo(campo)
 {
     if(campo.value == "")
@@ -46,14 +44,16 @@ function cadastrarUsuario()
     var sexo = document.getElementById('sexo');
     
     //INSERIR NO BANCO DE DADOS
-    var resposta = "";
-    routes.post({
+    var res = "";
+
+    usuario = {
         username: document.getElementById("nomeUsuario").value,
         password: document.getElementById("senha").value,
         name: document.getElementById("nome").value,
         date_of_birth: document.getElementById("nascimento").value,
         email: document.getElementById("email").value,
         gender: document.getElementById("sexo").value
-    }, resposta);
-    console.log(resposta);
+    }
+
+    //CHAMADA DA FUNÇÃO DE CADASTRO NO BANCO DE DADOS
 }
