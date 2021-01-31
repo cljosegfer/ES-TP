@@ -57,8 +57,7 @@ class TopicosPlano {
 
 function cadastrarPlano(cabecalho, topicos)
 {
-    console.log(cabecalho.getValoresCabecalho());
-    console.log(topicos.getValoresLinhas());
+    
     //Necessita subir dados para o banco de dados 
 }
 
