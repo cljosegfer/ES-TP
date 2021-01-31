@@ -1,21 +1,20 @@
 class Cabecalho {
     constructor()
     {
-        this.cabecalho = {};
         this.disciplina = document.getElementById("disciplina");
         this.ementa = document.getElementById("ementa");
         this.descricao = document.getElementById("descricao");
         this.referencias = document.getElementById("referencias");
     }
 
-    getValoresCabecalho()
+    getsDadosJSON()
     {
-        this.cabecalho["disciplina"] = this.disciplina.value;
-        this.cabecalho["ementa"] = this.ementa.value;
-        this.cabecalho["descricao"] = this.descricao.value;
-        this.cabecalho["referencias"] = this.referencias.value;
-
-        return this.cabecalho;
+        return {
+                disciplina: this.disciplina.value,
+                ementa: this.ementa.value,
+                descricao: this.descricao.value,
+                referencias: this.referencias.value
+            }
     }
 
     estaNulo()

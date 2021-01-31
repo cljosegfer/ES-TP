@@ -2,12 +2,24 @@ const mongoose = require('mongoose')
 const mongoose_paginate = require('mongoose-paginate')
 
 const plan_schema = new mongoose.Schema({
-    title: {
+    disciplina: {
         type: String,
         required: true,
     },
-    description: {
+    ementa: {
         type: String,
+        required: true,
+    },
+    descricao: {
+        type: String,
+        required: true,
+    },
+    referencias: {
+        type: String,
+        required: true,
+    },
+    conteudo: {
+        type: Array.apply,
         required: true,
     },
     url: {
@@ -17,10 +29,6 @@ const plan_schema = new mongoose.Schema({
     created_at: {
         type: Date,
         default: Date.now,
-    },
-    course: {
-        type: String,
-        required: true,
     },
 })
 
