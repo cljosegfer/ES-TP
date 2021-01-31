@@ -41,14 +41,21 @@ div.whiteboard:hover{
 input,
 select,
 textarea{
-    width: 80%;
+    width: calc(var(--whitewidth) * 0.8);
     height: 50px;
     margin: 10px 0
 }
 
 label,
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6,
+.slogan{
     font-family: Roboto, sans-serif;
+}
+
+h1.titulo{
+    text-transform: lowercase;
+    font-family: 'Source Code Pro', monospace;
+    font-weight:bold;
 }
 
 .botao{
@@ -76,6 +83,13 @@ div#botoes {
     display:flex;
     justify-content: space-between;
     align-content: space-between;
+}
+
+div#linhas {
+    display:flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-direction: column;
 }
 
 button.botaopequeno {
