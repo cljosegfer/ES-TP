@@ -8,10 +8,12 @@ const user_schema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
+        select: false,
     },
     name: {
             type: String,
             required: true,
+            select:false,
     },
     date_of_birth: {
         type: Date,
