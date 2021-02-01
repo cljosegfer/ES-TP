@@ -1,27 +1,29 @@
 <!-- views/partials/sign-up-form.handlebars -->
 
-<fieldset>
-    <!-- username -->
-    <div class="form-group">
-        <label for="username">Nome de Usuário: </label><br>
-        <input id="username" type="text" placeholder="Digite seu usuário" name="username" value="{{user.username}}"/>
-    </div>
+<fieldset style="border-width: 0">
+    <div class="whiteboard">
+        <!-- username -->
+        <div class="form-group">
+            <label for="username">Nome de Usuário: </label><br>
+            <input id="username" type="text" placeholder="Digite seu usuário" name="username" value="{{user.username}}"/>
+        </div>
 
-    <!-- password -->
-    <div class="form-group">
-        <label for="password">Senha: </label><br>
-        <input id="password" type="password" placeholder="Digite sua senha" name="password" value="{{user.password}}"/>
-    </div>
+        <!-- password -->
+        <div class="form-group">
+            <label for="password">Senha: </label><br>
+            <input id="password" type="password" placeholder="Digite sua senha" name="password" value="{{user.password}}"/>
+        </div>
 
-    <!-- password confirm -->
-    <div class="form-group">
-        <label for="passwordConfirm">Confirme a Senha: </label><br>
-        <input id="passwordConfirm" type="password" placeholder="Confirme sua senha" name="passwordConfirm"/>
-    </div>
+        <!-- password confirm -->
+        <div class="form-group">
+            <label for="passwordConfirm">Confirme a Senha: </label><br>
+            <input id="passwordConfirm" type="password" placeholder="Confirme sua senha" name="passwordConfirm"/>
+        </div>
 
-    <!-- e-mail -->
-    <div class="form-group">
-        <label for="email">E-mail: </label><br>
-        <input id="email" type="email" placeholder="Digite seu e-mail" name="email" value="{{user.email}}">
+        <!-- e-mail -->
+        <div class="form-group">
+            <label for="email">E-mail: </label><br>
+            <input id="email" type="email" placeholder="Digite seu e-mail" name="email" value="{{user.email}}">
+        </div>
     </div>
 </fieldset>

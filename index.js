@@ -69,6 +69,6 @@ require('./controllers/planos')(app)
 require('./controllers/comments')(app)
 require('./controllers/auth.js')(app)
 
-
+app.use('/styles', express.static(__dirname + '/views/styles'));
 
 module.exports = app
