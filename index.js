@@ -1,27 +1,74 @@
-const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
-const require_dir = require("require-dir");
+// express
+const express = require('express')
+const app = express()
+
+// dotenv
+require('dotenv').config()
+process.env.SECRET
+
+// handlebars
+var exphbs = require('express-handlebars')
+
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.set('view engine', 'handlebars')
+
+// body parser
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+
+// express validator
+const expressValidator = require('express-validator');
+app.use(expressValidator());
+
+// mongoose
+const mongoose = require('mongoose');
+require('./data/amigo-nerd-db')
+
+// method-override
+const methodOverride = require('method-override')
+app.use(methodOverride('_method')) // override with POST having ?_method=DELETE or ?_method=PUT
+
+// cookie parser
+var cookieParser = require('cookie-parser')
+const jwt = require('jsonwebtoken')
+app.use(cookieParser())
+
+// -----------------------------
 
 // start
-const app = express();
-app.use(express.json());
-app.use(cors());
+const port = 3001
 
-// mongo db
-mongoose
-  .connect(
-    "mongodb://localhost:27017/estp",
-    { useNewUrlParser: true },
-    { useUnifiedTopology: true }
-  )
-  .then(() => console.log("DB Connected!"))
-  .catch((err) => {
-    console.log("That didn't work");
-  }); //mongo warning
-require_dir("./src/models");
+app.listen(port, () => {
+    console.log('listenign port:' + port)
+})
 
-// routes
-app.use("/", require("./src/routes"));
+// auth, home and control
 
-app.listen(3001); // porta 3001
+var checkAuth = (req, res, next) => {
+    console.log('checking auth')
+    if(typeof req.cookies.nToken === 'undefined' || req.cookies.nToken === null) {
+        req.user = null
+    }
+    else {
+        var token = req.cookies.nToken
+        var decodedToken = jwt.decode(token, { complete: true }) || {}
+        req.user = decodedToken.payload
+    }
+    next()
+}
+app.use(checkAuth)
+
+app.get('/', (req, res) => {
+    var currentUser = req.user
+
+    res.render('home', { msg: 'hello world', currentUser });
+})
+
+require('./controllers/planos')(app)
+require('./controllers/comments')(app)
+require('./controllers/auth.js')(app)
+
+
+
+module.exports = app
