@@ -1,14 +1,16 @@
 <!-- views/planos-index.handlebars -->
 <div class="whiteboard">
-    <h2 class="titulo">Planos</h2>
+    <h2 class="titulo">Planos de estudo</h2>
 </div>
 
 <div class="row">
     {{#each planos}}
-    <div class="whiteboard card">
-        <a class="tituloplano" href="/planos/{{this._id}}"><h2 class="tituloplano card-title">{{this.disciplina}}</h2></a>
-        <h3 class="autorplano">criado por: {{this.author.username}}</h3>
-        <p class="descricaoplano card-text">{{this.descricao}}</p>
-    </div>
+    <a class="tituloplano" href="/planos/{{this._id}}">
+        <div class="whiteboard card">
+            <h2 class="tituloplano card-title">{{this.disciplina}}</h2>
+            <h3 class="autorplano">criado por: {{this.author.username}}</h3>
+            <p class="descricaoplano card-text">{{this.descricao}}</p>
+        </div>
+    </a>
     {{/each}}
 </div>
