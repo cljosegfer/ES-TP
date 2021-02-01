@@ -1,0 +1,23 @@
+<!-- views/partials/index.handlebars -->
+<div class="whiteboard">
+    <p class='slogan'>Um ambiente para criar, acessar e compartilhar planos de estudo com outras pessoas.</p>
+</div>
+
+<div class="container">
+    <div class="whiteboard">
+
+        <a class="botao" href="/planos/index">Acessar planos</a>
+        
+        {{#if currentUser}}
+            <a class="botao" href="/planos">Cadastrar plano</a>
+            
+            <a class="botao" href="/logout">Sair</a>
+
+        {{else}}
+            
+            <a class="botao" href="/login">Entrar</a>
+
+            <a class="botao" href="/sign-up">Cadastrar-se</a>
+        {{/if}}
+    </div>
+</div>
