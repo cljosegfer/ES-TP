@@ -103,3 +103,28 @@ div#linhas {
 button.botaopequeno {
     width: calc(var(--whitewidth) / 4 - 10px);
 }
+
+.tituloplano {
+    text-transform: lowercase;
+    font-family: 'Source Code Pro', monospace;
+    font-weight:bold;
+    color: var(--verde);
+    text-decoration: none;
+}
+
+.autorplano {
+    font-family: 'Roboto', monospace;
+    font-weight:bold;
+    color: var(--verde);
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.descricaoplano {
+    font-family: 'Roboto', monospace;
+    font-weight:bold;
+    color: var(--verde);
+    text-decoration: none;
+    font-size: 1em;
+    text-align: justify;
+}

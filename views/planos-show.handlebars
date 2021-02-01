@@ -1,41 +1,41 @@
 <!-- views/planos-show.handlebars -->
-<link rel="stylesheet" 
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
-    crossorigin="anonymous">
 
-<div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-        <h1>{{plano.disciplina}}</h1>
-        <p>{{plano.author.username}}, {{plano.created_at}}</p>
-        <p>{{plano.descricao}}</p>
-
-        <p>{{plano.ementa}}</p>
-        <p>{{plano.referencias}}</p>
-        
-
-        <p>
-            <form method="GET" action="/planos/{{plano._id}}/edit">
-            <button type="submit">editar</button>
-            </form>
-        </p>
-        
-        <p>
-            <form method="POST" action="/planos/{{plano._id}}?_method=DELETE">
-            <button type="submit">deletar</button>
-            </form>
-        </p>
-
-        <hr>
-        <!-- comment form -->
-        {{> comments-form}}
-
-        <hr>
-
-        {{#each plano.comments}}
-            <p>{{this.content}}</p>
-            <p class="text-right">{{this.author.username}}</p>
-        {{/each}}
-
-    </div>
+<div class="whiteboard">
+    <h2 class="tituloplano">{{plano.disciplina}}</h2>
+    <h3 class="autorplano">criado por: {{plano.author.username}} em {{plano.created_at}}</h3>
 </div>
+
+<div class="whiteboard">
+    <h3>Descrição</h3>
+    <p>{{plano.descricao}}</p>
+</div>
+
+<div class="whiteboard">
+    <h3>Ementa</h3>
+    <p>{{plano.ementa}}</p>
+</div>
+
+<div class="whiteboard">
+    <h3>Referências</h3>
+    <p>{{plano.referencias}}</p>
+</div>
+
+<div class="whiteboard">
+    <form method="GET" action="/planos/{{plano._id}}/edit">
+        <button class="botao" type="submit">Editar</button>
+    </form>
+
+    <form method="POST" action="/planos/{{plano._id}}?_method=DELETE">
+        <button class="botao" type="submit">Deletar</button>
+    </form>
+</div>
+
+<!-- comment form -->
+{{> comments-form}}
+
+{{#each plano.comments}}
+    <div class="whiteboard">
+        <p class="comentario">{{this.content}}</p>
+        <p class="autorcomentario text-right">comentário de: {{this.author.username}}</p>
+    </div>
+{{/each}}
