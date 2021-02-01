@@ -1,15 +1,31 @@
 <!-- views/partials/pĺanos-form.handlebars -->
+
 <fieldset style="border-width:0">
-    <!-- title -->
-    <div class="form-group whiteboard">
-        <label for="title">Título</label><br>
-        <input id="title" type="text" name="title" value="{{plano.title}}"/>
+
+<fieldset>
+    <!-- disciplina -->
+    <div class="form-group">
+        <label for="disciplina">disciplina</label><br>
+        <input id="disciplina" type="text" name="disciplina" value="{{plano.disciplina}}"/>
     </div>
 
-    <!-- description -->
-    <div class="form-group whiteboard">
-        <label for="description">Descrição</label><br>
-        <textarea id="description" name="description" rows="10" />{{plano.description}}</textarea>
+    <!-- ementa -->
+    <div class="form-group">
+        <label for="ementa">ementa</label><br>
+        <input id="ementa" type="text" name="ementa" value="{{plano.ementa}}"/>
+    </div>
+
+    <!-- descricao -->
+    <div class="form-group">
+        <label for="descricao">descricao</label><br>
+        <textarea id="descricao" name="descricao" rows="10" />{{plano.descricao}}</textarea>
+    </div>
+
+    <!-- referencias -->
+    <div class="form-group">
+        <label for="referencias">referencias</label><br>
+        <textarea id="referencias" name="referencias" rows="10" />{{plano.referencias}}</textarea>
+
     </div>
 
 </fieldset>
