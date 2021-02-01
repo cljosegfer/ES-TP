@@ -20,7 +20,8 @@ div.container{
     background-color: var(--verde);
 }
 
-div.whiteboard{
+div.whiteboard,
+fieldset.whiteboard{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,7 +35,8 @@ div.whiteboard{
     
 }
 
-div.whiteboard:hover{
+div.whiteboard:hover,
+fieldset.whiteboard:hover{
     transform: scale(1.02);
 }
 
