@@ -15,7 +15,7 @@ O sistema será como uma rede social de planos de estudo. Os usuários poderão 
 
 ## Tecnologias:
 
-HTML, CSS, Handlebards, JavaScript, NodeJS, MongoDB e GitHub.
+HTML, CSS, Handlebars, JavaScript, NodeJS, MongoDB e GitHub.
 
 ## Scrum board
 
