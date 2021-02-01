@@ -6,7 +6,7 @@ module.exports = (app) => {
 
     // create
     app.post("/planos/:planoId/comments", function(req, res) {
-        const comment = new Comment(req.body);
+        const comment = new Comment(req.body)
         comment.author = req.user._id
       
         comment
@@ -19,10 +19,10 @@ module.exports = (app) => {
               return plano.save()
           })
           .then(plano => {
-            return res.redirect(`/planos/${plano._id}`);
+            return res.redirect(`/planos/${plano._id}`)
           })
           .catch(err => {
-            console.log(err);
-          });
-      });
+            console.log(err)
+          })
+      })
 }
